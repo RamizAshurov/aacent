@@ -29,10 +29,10 @@ async function postCart() {
     document.querySelectorAll(".cart-product").forEach(product => {
         requestBody.push({
             id: product.dataset.productId,
-            quantity: +product.querySelector(".cart-product__quantity").innerHTML,
+            quantity: product.querySelector(".cart-product__quantity").innerHTML,
         })
     })
-
+    
     const response = await fetch("https://app.aaccent.su/js/confirm.php", {
         method: "POST",
         body: requestBody
