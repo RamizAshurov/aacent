@@ -24,7 +24,20 @@ async function fetchBrands() {
 }
 
 async function postCart() {
-    const response = await fetch("https://app.aaccent.su/js/confirm.php");
+    const requestBody = [];
+
+    document.querySelectorAll(".cart-product").forEach(product => {
+        requestBody.push({
+            id: product.dataset.productId,
+            quantity: +product.querySelector(".cart-product__quantity").innerHTML,
+        })
+    })
+
+    const response = await fetch("https://app.aaccent.su/js/confirm.php", {
+        method: "POST",
+        body: requestBody
+    });
+    console.log(requestBody)
     if (response.ok) {
         let { result } = await response.json();
         if (result === "ok") {
