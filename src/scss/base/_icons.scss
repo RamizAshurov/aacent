@@ -1,0 +1,62 @@
+@font-face {
+    font-family: "icons";
+    font-display: "swap";
+    font-style: normal; 
+    font-weight: 400;
+    src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff")
+}
+
+[class^="icon-"], [class*="icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icons' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+  
+.icon-arrow:before {
+    content: "\e900";
+  }
+  .icon-githab:before {
+    content: "\e901";
+  }
+  .icon-instagram:before {
+    content: "\e902";
+  }
+  .icon-linkedin:before {
+    content: "\e903";
+  }
+  .icon-location:before {
+    content: "\e904";
+  }
+  .icon-mail:before {
+    content: "\e905";
+  }
+  .icon-phone:before {
+    content: "\e906";
+  }
+  .icon-service-01:before {
+    content: "\e907";
+  }
+  .icon-service-02:before {
+    content: "\e908";
+  }
+  .icon-service-03:before {
+    content: "\e909";
+  }
+  .icon-share-link:before {
+    content: "\e90a";
+  }
+  .icon-twtter:before {
+    content: "\e90b";
+  }
+  .icon-price-tag:before {
+    content: "\e935";
+  }
+  

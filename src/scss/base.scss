@@ -1,0 +1,54 @@
+:root {
+    --animation-duration: 0.3s
+ }
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+body {
+    color: $black;
+    &.cart {
+        .catalog-page {
+            display: none;
+        }
+        .cart-page {
+            display: block
+        }
+    }
+    &._lock {
+        height: 100vh;
+        overflow: hidden;
+    }
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
+}
+
+input {
+    border: none;
+    outline: none
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 1240px;
+    @include phone {
+        padding: 0 16px
+    }
+}

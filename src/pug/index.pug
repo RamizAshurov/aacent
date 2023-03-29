@@ -1,0 +1,38 @@
+extends templates/layout
+
+block head
+    title Aaccent 
+    link(rel="stylesheet", href="css/style.min.css")
+block content 
+    main
+        .container
+            .catalog-page
+                aside.sidebar 
+                    .sidebar__filter
+                        .sidebar__filter-title Бренды
+                        .sidebar__filter-items 
+
+                        .sidebar__filter-actions
+                            button.sidebar__filter-button.sidebar__filter-button_apply(type="button") Apply
+                            button.sidebar__filter-button.sidebar__filter-button_clear(type="button") 
+                                span.icon 
+                                span.label Clear
+                .catalog
+                    .catalog__list 
+                    .catalog__pagination
+            .cart-page
+                .cart-page__product-list
+                    p Cart is empty!
+                .cart-page__footer
+                    .cart-page__total-label Total sum: 
+                    .cart-page__total-sum
+                        span 0
+                        span USD
+                    .cart-page__order-button._disabled Make order
+                .cart-page__popup 
+                    .cart-page__popup-container 
+                        .cart-page__popup-content
+                            .cart-page__popup-close
+                            h2 Thank you for order!
+block scripts 
+    script(src="js/app.min.js") 
